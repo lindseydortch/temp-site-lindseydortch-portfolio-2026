@@ -15,8 +15,10 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Frontend Mentor | Temp Site Lindseydortch Portfolio 2026',
-        description: 'A frontendmentor.io challenge',
+        title:
+          'Lindsey Dortch | Senior Software Engineer at the Intersection of Growth, User Experience & Product',
+        description:
+          "Ciao, I'm Lindsey Dortch, a Dallas native who started in marketing and now solves the problems I used to wait on engineers to fix. Today I'm a Senior Software Engineer working at the intersection of growth, user experience, and product.",
       },
     ],
     links: [
@@ -26,7 +28,7 @@ export const Route = createRootRoute({
       },
       {
         rel: 'icon',
-        href: `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌲</text></svg>`,
+        href: `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>`,
       },
       {
         rel: 'preconnect',
@@ -39,7 +41,7 @@ export const Route = createRootRoute({
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet',
       },
     ],
   }),
@@ -53,7 +55,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {children}
+        <main>{children}</main>
         <TanStackDevtools
           config={{
             position: 'bottom-right',

@@ -1,3 +1,5 @@
+@use 'styles/fonts' as *;
+
 *,
 *::before,
 *::after {
@@ -10,12 +12,12 @@
 html {
   font-size: 62.5%;
 
-  @media only screen and (max-width: $bp-mobile) {
-    font-size: 50%;
-  }
+  // @media only screen and (max-width: $bp-mobile) {
+  //   font-size: 50%;
+  // }
 }
 
 body {
   box-sizing: border-box;
-  // font-family: $outfit;
+  font-family: $lato;
 }
