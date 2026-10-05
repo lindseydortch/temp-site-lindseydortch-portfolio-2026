@@ -20,4 +20,12 @@ html {
 body {
   box-sizing: border-box;
   font-family: $lato;
+
+  scroll-behavior: smooth;
+  background-color: $black;
+  color: $white;
+}
+
+a {
+  text-decoration: none;
 }

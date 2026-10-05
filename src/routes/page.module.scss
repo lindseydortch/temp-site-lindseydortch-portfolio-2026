@@ -1,0 +1,201 @@
+.container1 {
+  position: relative;
+
+  width: 100lvw;
+  height: 100lvh;
+}
+
+.nav {
+  padding: 3rem;
+
+  h1 {
+    font-family: $raven;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: $rose500;
+  }
+}
+
+.hero {
+  padding: 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  // align-items: center;
+
+  h2 {
+    margin-top: 8rem;
+    font-size: 8.4rem;
+    font-family: $raven;
+    text-transform: uppercase;
+    color: $green100;
+    font-weight: 900;
+  }
+
+  p {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: $white;
+    letter-spacing: 0.1rem;
+    line-height: 1.5;
+  }
+}
+
+.content {
+  // height: 100%;
+}
+
+.buttons {
+  margin-top: 2rem;
+
+  button {
+    cursor: pointer;
+    padding: 1rem;
+    border: none;
+    background-color: $yellow500;
+    border-radius: 4rem;
+    font-family: $raven;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $black;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.duomo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 50lvw;
+  height: 95lvh;
+  z-index: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.headshot {
+  position: absolute;
+  bottom: 0;
+  left: 55%;
+  transform: translateX(-50%);
+
+  height: 47lvh;
+  width: auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.container2 {
+  // width: 100lvw;
+  // height: 100lvh;
+  padding: 6rem 3rem;
+  background-color: $green500;
+
+  h3 {
+    font-size: 3rem;
+    font-family: $raven;
+    color: $rose500;
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+    font-family: $raven;
+    text-transform: uppercase;
+    letter-spacing: 0.03rem;
+    color: $yellow500;
+  }
+
+  ul {
+    list-style-position: inside;
+  }
+
+  p,
+  li {
+    font-size: 1.6rem;
+  }
+}
+
+.content2 {
+  margin-top: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+}
+
+.card {
+  border: 1rem double $white;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.content3 {
+  margin-top: 4rem;
+
+  p {
+    width: 80%;
+    line-height: 1.3;
+  }
+}
+
+.footer {
+  padding: 6rem 3rem;
+
+  h3 {
+    font-size: 2rem;
+    font-family: $raven;
+    color: $green100;
+  }
+
+  ul {
+    list-style: none;
+    font-size: 3rem;
+    color: $rose100;
+    margin-top: 2rem;
+
+    display: flex;
+    column-gap: 4rem;
+
+    li {
+      transition: all 0.3s ease-in;
+    }
+
+    li:hover {
+      transform: scale(1.2);
+    }
+
+    a {
+      transition: all 0.3s ease-in;
+
+      &:visited,
+      &:link {
+        color: inherit;
+      }
+
+      &:hover {
+        color: $green100;
+      }
+    }
+  }
+}
+
+.copyright {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
