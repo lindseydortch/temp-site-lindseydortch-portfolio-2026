@@ -1,8 +1,13 @@
 .container1 {
   position: relative;
+  overflow: hidden;
 
-  width: 100lvw;
-  height: 100lvh;
+  width: 100%;
+  min-height: 100lvh;
+
+  @media only screen and (max-width: $bp-tablet) {
+    min-height: auto;
+  }
 }
 
 .nav {
@@ -13,6 +18,10 @@
     font-size: 4rem;
     text-transform: uppercase;
     color: $rose500;
+
+    @media only screen and (max-width: $bp-mobile-sm) {
+      font-size: 3.4rem;
+    }
   }
 }
 
@@ -23,6 +32,11 @@
   grid-template-columns: repeat(2, 1fr);
   // align-items: center;
 
+  @media only screen and (max-width: $bp-tablet) {
+    grid-template-columns: 1fr;
+    padding-bottom: 0;
+  }
+
   h2 {
     margin-top: 8rem;
     font-size: 8.4rem;
@@ -30,6 +44,28 @@
     text-transform: uppercase;
     color: $green100;
     font-weight: 900;
+
+    // short desktop screens: pull the headline up so the CTA stays above the fold
+    @media only screen and (max-height: 56.25em) {
+      margin-top: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-desktop-sm) {
+      margin-top: 4rem;
+      font-size: 7rem;
+    }
+
+    @media only screen and (max-width: $bp-tablet) {
+      margin-top: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+      font-size: 6.4rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile-sm) {
+      font-size: 5rem;
+    }
   }
 
   p {
@@ -42,7 +78,17 @@
 }
 
 .content {
-  // height: 100%;
+  position: relative;
+  z-index: 1;
+  // keeps the copy clear of the headshot on desktop. The headshot is ~36lvh
+  // wide and centered at 55% of the page, so its left edge pokes ~(18lvh - 5vw)
+  // into this column.
+  padding-right: max(4rem, calc(18lvh - 5vw + 3rem));
+
+  @media only screen and (max-width: $bp-tablet) {
+    padding-right: 0;
+    max-width: 68rem;
+  }
 }
 
 .buttons {
@@ -61,9 +107,30 @@
     text-transform: uppercase;
     transition: all 0.3s ease-in;
 
+    @media only screen and (max-width: $bp-mobile) {
+      padding: 1.2rem 2rem;
+      font-size: 2rem;
+    }
+
     &:hover {
       transform: scale(1.1);
     }
+  }
+}
+
+// Desktop: images are positioned against .container1.
+// Tablet and below: .media becomes its own block under the copy.
+.media {
+  @media only screen and (max-width: $bp-tablet) {
+    position: relative;
+    height: 70vw;
+    max-height: 60rem;
+    margin: 4rem -3rem 0;
+  }
+
+  @media only screen and (max-width: $bp-mobile) {
+    height: 90vw;
+    max-height: none;
   }
 }
 
@@ -72,13 +139,24 @@
   bottom: 0;
   right: 0;
 
-  width: 50lvw;
-  height: 95lvh;
+  width: 50%;
+  height: 95%;
   z-index: 0;
+
+  @media only screen and (max-width: $bp-tablet) {
+    width: 70%;
+    height: 100%;
+  }
+
+  @media only screen and (max-width: $bp-mobile) {
+    width: 80%;
+  }
 
   img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: left top;
   }
 }
 
@@ -91,8 +169,18 @@
   height: 47lvh;
   width: auto;
 
+  @media only screen and (max-width: $bp-tablet) {
+    left: 40%;
+    height: 80%;
+  }
+
+  @media only screen and (max-width: $bp-mobile) {
+    left: 38%;
+    height: 75%;
+  }
+
   img {
-    width: 100%;
+    width: auto;
     height: 100%;
   }
 }
@@ -103,11 +191,19 @@
   padding: 6rem 3rem;
   background-color: $green500;
 
+  @media only screen and (max-width: $bp-mobile) {
+    padding: 4rem 3rem;
+  }
+
   h3 {
     font-size: 3rem;
     font-family: $raven;
     color: $rose500;
     margin-bottom: 1rem;
+
+    @media only screen and (max-width: $bp-mobile) {
+      font-size: 3.6rem;
+    }
   }
 
   h4 {
@@ -116,15 +212,25 @@
     text-transform: uppercase;
     letter-spacing: 0.03rem;
     color: $yellow500;
+
+    @media only screen and (max-width: $bp-mobile) {
+      font-size: 2.4rem;
+    }
   }
 
   ul {
-    list-style-position: inside;
+    padding-left: 2rem;
+    list-style-position: outside;
   }
 
   p,
   li {
     font-size: 1.6rem;
+
+    @media only screen and (max-width: $bp-mobile) {
+      font-size: 2rem;
+      line-height: 1.4;
+    }
   }
 }
 
@@ -134,12 +240,30 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 4rem;
+  row-gap: 4rem;
+
+  @media only screen and (max-width: $bp-desktop-sm) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
   border: 1rem double $white;
   padding: 2rem;
   border-radius: 1rem;
+
+  // odd card out spans the full row in the 2-column layout
+  &:last-child {
+    @media only screen and (max-width: $bp-desktop-sm) {
+      grid-column: 1 / -1;
+    }
+  }
 }
 
 .content3 {
@@ -148,16 +272,28 @@
   p {
     width: 80%;
     line-height: 1.3;
+
+    @media only screen and (max-width: $bp-tablet) {
+      width: 100%;
+    }
   }
 }
 
 .footer {
   padding: 6rem 3rem;
 
+  @media only screen and (max-width: $bp-mobile) {
+    padding: 4rem 3rem;
+  }
+
   h3 {
     font-size: 2rem;
     font-family: $raven;
     color: $green100;
+
+    @media only screen and (max-width: $bp-mobile) {
+      font-size: 2.6rem;
+    }
   }
 
   ul {
@@ -167,7 +303,18 @@
     margin-top: 2rem;
 
     display: flex;
+    flex-wrap: wrap;
     column-gap: 4rem;
+    row-gap: 2rem;
+
+    @media only screen and (max-width: $bp-mobile) {
+      font-size: 3.6rem;
+      column-gap: 3.2rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile-sm) {
+      column-gap: 2.4rem;
+    }
 
     li {
       transition: all 0.3s ease-in;
@@ -178,6 +325,7 @@
     }
 
     a {
+      display: flex;
       transition: all 0.3s ease-in;
 
       &:visited,
@@ -198,4 +346,8 @@
   margin-top: 4rem;
   text-align: center;
   font-size: 1.2rem;
+
+  @media only screen and (max-width: $bp-mobile) {
+    font-size: 1.6rem;
+  }
 }

@@ -48,7 +48,7 @@ function Home() {
               <button onClick={scrollToSection}>Get In Touch</button>
             </div>
           </div>
-          <div className={styles.content}>
+          <div className={styles.media}>
             <div className={styles.duomo}>
               <img src="/images/duomo.png" alt="the duomo in Florence, Italy" />
             </div>
