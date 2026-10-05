@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100svh;
+}
+
+.nav {
+  padding: 3rem;
+
+  a {
+    display: inline-block;
+  }
+
+  h1 {
+    font-family: $raven;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: $rose500;
+
+    @media only screen and (max-width: $bp-mobile-sm) {
+      font-size: 3.4rem;
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 3rem;
+  max-width: 80rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-family: $raven;
+    font-size: 20rem;
+    font-weight: 900;
+    line-height: 1;
+    color: $green100;
+
+    @media only screen and (max-width: $bp-mobile) {
+      font-size: 14rem;
+    }
+  }
+
+  h3 {
+    margin-top: 1rem;
+    font-family: $raven;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: $yellow500;
+
+    @media only screen and (max-width: $bp-mobile) {
+      font-size: 3.6rem;
+    }
+  }
+
+  p {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: $white;
+    letter-spacing: 0.1rem;
+    line-height: 1.5;
+  }
+}
+
+.buttons {
+  margin-top: 3rem;
+
+  a {
+    display: inline-block;
+    padding: 1rem 1.6rem;
+    background-color: $yellow500;
+    border-radius: 4rem;
+    font-family: $raven;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $black;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+
+    @media only screen and (max-width: $bp-mobile) {
+      padding: 1.2rem 2rem;
+      font-size: 2rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

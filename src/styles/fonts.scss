@@ -12,7 +12,7 @@ $raven-hell-weights: (
 @each $name, $weight in $raven-hell-weights {
   @font-face {
     font-family: 'Raven Hell';
-    src: url('../fonts/RavenHell-#{$name}.woff2') format('woff2');
+    src: url('../fonts/RavenHell-#{$name}Gothic.woff2') format('woff2');
     font-weight: $weight;
     font-style: normal;
     font-display: swap;

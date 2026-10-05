@@ -50,11 +50,24 @@ function Home() {
           </div>
           <div className={styles.media}>
             <div className={styles.duomo}>
-              <img src="/images/duomo.png" alt="the duomo in Florence, Italy" />
+              <img
+                src="/images/duomo-1600.webp"
+                srcSet="/images/duomo-800.webp 800w, /images/duomo-1600.webp 1600w"
+                sizes="(max-width: 768px) 80vw, (max-width: 992px) 70vw, 50vw"
+                width={1600}
+                height={1912}
+                fetchPriority="high"
+                alt="the duomo in Florence, Italy"
+              />
             </div>
             <div className={styles.headshot}>
               <img
-                src="/images/transparent-headshot.png"
+                src="/images/headshot-1100.webp"
+                srcSet="/images/headshot-600.webp 600w, /images/headshot-1100.webp 1100w"
+                sizes="(max-width: 768px) 52vw, (max-width: 992px) 43vw, 36vh"
+                width={1100}
+                height={1437}
+                fetchPriority="high"
                 alt="headshot of Lindsey Dortch"
               />
             </div>

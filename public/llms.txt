@@ -1,0 +1,20 @@
+# Lindsey Dortch
+
+> Ciao, I'm Lindsey Dortch, a Dallas native who started in marketing and now solves the problems I used to wait on engineers to fix. Today I'm a Senior Software Engineer working at the intersection of growth, user experience, and product.
+
+I'm currently looking for Full Stack Senior Software Engineer roles, especially work at the intersection of growth, user experience, and product.
+
+## Tech stack
+
+- Frontend: React, Next.js, TanStack Start, HTML, CSS, Tailwind, vanilla JavaScript, Angular
+- Backend, databases and cloud: Node.js, Python, PostgreSQL, GraphQL, Prisma, Express.js, NestJS, AWS, Google Cloud Platform, Salesforce Commerce Cloud
+- AI: prompt engineering, agentic AI, MCP, RAG, Claude Code, Codex
+
+## Links
+
+- [Website](https://lindseydortch.dev/)
+- [LinkedIn](https://www.linkedin.com/in/lindseydortch/)
+- [GitHub](https://github.com/lindseydortch)
+- [X / Twitter](https://x.com/lindseydortch)
+- [Twitch](https://www.twitch.tv/lindseydortch)
+- [DEV Community](https://dev.to/lindseydortch)
